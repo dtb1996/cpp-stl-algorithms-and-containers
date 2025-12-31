@@ -1,0 +1,17 @@
+# Build directories
+build/
+out/
+cmake-build-*/
+
+# IDE files
+.vs/
+.vscode/
+*.user
+
+# Binaries
+*.exe
+*.pdb
+*.ilk
+
+# Generated output
+example.txt
