@@ -6,7 +6,7 @@
 
 namespace text
 {
-    std::string text::normalize(std::string_view input)
+    std::string normalize(std::string_view input)
     {
         std::string result;
         result.reserve(input.size());
@@ -26,7 +26,7 @@ namespace text
         return result;
     }
 
-    std::vector<std::string> text::tokenize(std::string_view normalized_text)
+    std::vector<std::string> tokenize(std::string_view normalized_text)
     {
         std::vector<std::string> words;
         std::string text(normalized_text);
