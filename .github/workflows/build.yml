@@ -26,7 +26,7 @@ jobs:
       - name: Package main executable
         run: |
           mkdir -p artifacts
-          cp build/word_counter artifacts/word_counter_linux
+          cp build/bin/word_counter artifacts/word_counter_linux
 
       - name: Upload Linux artifact
         uses: actions/upload-artifact@v4
@@ -51,7 +51,7 @@ jobs:
       - name: Package main executable
         run: |
           mkdir artifacts
-          copy build\Release\word_counter.exe artifacts\word_counter_windows.exe
+          copy build\bin\word_counter.exe artifacts\word_counter_windows.exe
 
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v4
