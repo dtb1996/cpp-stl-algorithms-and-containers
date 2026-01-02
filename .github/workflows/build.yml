@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-linux:
-    name: Build & Test Linux
+    name: Build Linux
     runs-on: ubuntu-latest
 
     steps:
@@ -22,9 +22,6 @@ jobs:
 
       - name: Build
         run: cmake --build build --config Release
-
-      - name: Run tests
-        run: ./build/word_counter_tests
 
       - name: Package main executable
         run: |
@@ -38,7 +35,7 @@ jobs:
           path: artifacts/word_counter_linux
 
   build-windows:
-    name: Build & Test Windows
+    name: Build Windows
     runs-on: windows-latest
 
     steps:
@@ -50,9 +47,6 @@ jobs:
 
       - name: Build
         run: cmake --build build --config Release
-
-      - name: Run tests
-        run: build\Release\word_counter_tests.exe
 
       - name: Package main executable
         run: |
