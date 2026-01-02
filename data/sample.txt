@@ -1,0 +1,12 @@
+This is a simple sample text file.
+
+This file is intended to test the word frequency analyzer.
+The analyzer should count how often each word appears in the text.
+
+Words like text, file, and analyzer appear multiple times.
+Words like simple and sample appear fewer times.
+
+Punctuation! Should? Not: matter; here.
+Case CASE case should all be normalized to the same word.
+
+This is only a sample.
