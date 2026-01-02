@@ -26,6 +26,13 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    // Ensure top_n is positive
+    if (top_n == 0)
+    {
+        std::cerr << "top-n must be a positive integer.\n";
+        return 1;
+    }
+
     std::ifstream file(filename);
     if (!file)
     {
@@ -43,6 +50,11 @@ int main(int argc, char* argv[]) {
 
     const auto normalized = text::normalize(content);
     const auto words = text::tokenize(normalized);
+
+    if (top_n > words.size())
+    {
+        top_n = words.size(); // clamp to max available words
+    }
 
     const auto wordCounts = word_count::count_unordered(words);
 
