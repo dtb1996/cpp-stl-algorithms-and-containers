@@ -2,7 +2,7 @@
 
 namespace word_count
 {
-    OrderedResult word_count::count_ordered(const std::vector<Word> &words)
+    OrderedResult count_ordered(const std::vector<Word> &words)
     {
         OrderedResult result;
 
@@ -14,7 +14,7 @@ namespace word_count
         return result;
     }
 
-    UnorderedResult word_count::count_unordered(const std::vector<Word> &words)
+    UnorderedResult count_unordered(const std::vector<Word> &words)
     {
         UnorderedResult result;
         result.reserve(words.size());

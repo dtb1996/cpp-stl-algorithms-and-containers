@@ -4,7 +4,7 @@
 
 namespace top_words
 {
-    std::vector<WordCountPair> top_words::extract_top_n(const std::vector<WordCountPair> &input, std::size_t n)
+    std::vector<WordCountPair> extract_top_n(const std::vector<WordCountPair> &input, std::size_t n)
     {
         if (input.empty() || n == 0)
             return {};
